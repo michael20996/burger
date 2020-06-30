@@ -19,7 +19,8 @@
   "homepage": "https://github.com/michael20996/burger#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "express-handlebars": "^4.0.0",
+    "express-handlebars": "^4.0.4",
     "mysql": "^2.18.1"
-  }
+  },
+  "devDependencies": {}
 }

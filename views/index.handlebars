@@ -1,0 +1,52 @@
+<div class="container">
+	<div class = 'jumbotron' align = 'center'>
+        <h1>Burger Tracker</h1>
+    </div>
+    <div class = 'row justify-content-md-center'>
+         <div class="row">
+                    
+
+      <div class="col" id="left-col">
+          
+        <div class="text-right ml-auto mr-5">
+             <h2>Burger Menu</h2>
+          {{#each burgers}}
+            {{#unless devoured}}
+              <div class="mb-1">
+                {{burger_name}}
+                <button class="btn btn-sm btn-outline-danger devour" burgerId="{{id}}">
+                  Devour It!
+                </button>
+              </div>
+            {{/unless}}
+          {{/each}}
+        </div>
+      </div>
+
+      <div class="col" id="right-col">
+        <div class="text-left mr-auto ml-5">
+          {{#each burgers}}
+            {{#if devoured}}
+              <div class="mb-1">
+                {{burger_name}}
+                <button class="btn btn-sm btn-outline-dark remove" burgerId="{{id}}">
+                  Remove
+                </button>
+              </div>
+            {{/if}}
+          {{/each}}
+        </div>
+      </div>
+
+    </div>
+
+    <p class="lead">Order a burger you want to eat</p>
+    <form id="add-burger">
+      <div class="form-group mx-auto" style="width: 35%">
+        <textarea type="text" class="form-control form-control-md" name="bname" id="burger"></textarea>
+      </div>
+      <button type="submit" class="btn btn-danger">Add burger to Order</button>
+    </form>
+
+    </div>
+</div>
